@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops with Vue.js</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+
+<div id="shoppingList">
+  <ul>
+      <li v-for="item in groceries">
+          {{item.item}}
+      </li>
+  </ul>
+</div>
+<script>
+    var lists;
+    lists = new Vue({
+        el: '#shoppingList',
+        data: {
+            groceries: [
+                {item: 'tomato'},
+                {item: 'lettuce'},
+                {item: 'apples'},
+                {item: 'bread'},
+                {item: 'yogurt'},
+                {item: 'milk'},
+                {item: 'peanut butter'}
+            ]
+        }
+    });
+</script>
+</body>
+</html>
